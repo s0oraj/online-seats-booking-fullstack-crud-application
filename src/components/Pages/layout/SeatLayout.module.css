@@ -1,0 +1,308 @@
+:root {
+    --seat-color: #ffffff; /* Initial color */
+    --seat-default: inset 0px 0px 10px 0px rgba(31, 38, 135, 0.37);
+    --seat-booked: inset 0px 0px 10px 0px rgba(187, 16, 16, 0.674);
+    --seat-present: inset 0px 0px 10px 0px rgb(0 ,228 ,95 , 0.79);
+    --button-font-size: large;
+  }
+
+
+.container {
+    justify-content: center;
+    width: 100%;
+    background-color: aquamarine;
+}
+
+.outerGrid {
+    display: grid;
+    grid-template-columns: 30% 20% 30%;
+    gap: 50px 50px;
+    justify-content: center;
+    margin: 100px;
+    margin-top: 0px;
+    margin-bottom: 25px;
+    padding: 50px;
+/* 
+    border: 10px outset black; */
+    border-radius: 30px;
+
+}
+
+.outerGridItem {
+    display: inline-grid;
+    background-color: rgb(247 228 4 / 58%);
+    border-radius: 10px;
+}
+
+.innerGridContainer {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 2px 2px;
+    justify-content: center;
+    margin: 5px;
+}
+
+.seat {
+    border: 2px solid black;
+    padding: 18px;
+    background-color: var(--seat-color);
+    margin: 3px;
+    border-radius: 10px;
+/* 
+    background-color: var(--seat-color);
+    border-radius: 10px; 
+    padding: 20px;
+    box-shadow:inset 0px 0px 10px 0px rgba(31, 38, 135, 0.37);  */
+}
+
+.hoverable:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    /* No background change */
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Buttons */
+
+.buttonsContainer {
+    margin-bottom: 150px;
+    justify-content: center;
+    display: flex;
+}
+
+button {
+    padding: 20px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: padding 0.3s, font-size 0.3s;
+    font-size: var(--button-font-size)
+
+}
+
+
+.resetButton {
+    background-color: #9b9898;
+    /* Light gray */
+    color: #4a4949;
+}
+
+.resetButton:hover {
+    background-color: #dddddd;
+    padding: 22px 44px;
+    /* Slightly lighter gray on hover */
+
+}
+
+
+.saveButton {
+    background-color: #4CAF50;
+   
+}
+
+.saveButton:hover {
+    background-color: #3e8e41;
+    padding: 22px 44px;
+    /* Darker green on hover */
+}
+
+.editButton {
+    background-color:crimson;
+}
+
+.smallContainer {
+
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+}
+
+.availableSeat {
+    background-color: rgb(16 24 108 / 64%);
+    color: white;
+    text-shadow: 0px 0px 2px rgba(255, 255, 0, 0.5);
+    margin-left: 700px;
+    margin-right: 700px;
+    margin-top: 25  px;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+
+
+/* SIDE BAR */
+
+
+.sidebar {
+    width: 200px;
+    background-color: #0d1629bf;
+    color: white;
+    height: 100vh; /* Full height */
+    border-radius: 10px;
+  }
+  
+  .sidebarHeader {
+    padding: 10px;
+    font-size: 20px;
+    background-color: #222;
+  }
+  
+  .sidebarMenu {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebarMenuItem {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  /* Hover effect */
+  .sidebarMenuItem:hover {
+    background-color: #444;
+  }
+
+
+
+
+  /* CONTAINER SECTION */
+
+
+.contSection {
+    display: grid;
+    grid-template-columns: 10% 90%;
+
+}
+
+
+/* WORKPLACE */
+
+.workplace {
+    background-color: antiquewhite;
+    display: grid;
+}
+
+
+/* POPUP */
+
+
+.popupRow {
+
+    background-color: #444;
+    color: #ffffff;
+    text-align: center;
+    border-bottom: 1px solid;
+
+}
+
+.popupRow:hover {
+
+    background-color: #222;
+    
+}
+
+.info {
+    /* background-color: #444; */
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    justify-content: center;
+    height:90px
+
+}
+
+.infoElement{
+    grid-template-columns: repeat(6, 1fr);
+    /* background-color: chartreuse; */
+    margin: 40px 50px 20px 50px;
+   justify-content: space-around;
+   display: flex;
+   flex-direction: row;
+
+}
+
+.infoColor {
+    border: 3px solid #ffff00a3;
+    padding: 15px    ;
+}
+
+.infoText {
+
+}
+
+/* Mid Section */
+
+
+.midSection {
+
+    /* background-color: #3e8e41; */
+    display: grid;
+    grid-template-columns: 20% 80%;
+
+}
+
+.ddContainer {
+    /* background-color: #222; */
+    display: grid;
+    justify-content: center;
+}
+
+/* Book Seats */
+
+.contSectionBooking {
+    display: grid;
+
+}
+
+/* Css Blur Effects for booking form */
+
+.seatBookingContainer{
+
+    filter:blur(4px);
+    pointer-events: none;
+}
+
+.formContainer {
+
+    /* position: relative; 
+    width: 100%;
+    height: 100vh;  */
+
+}
+
+/* Back Botton */
+
+.backButton {
+    background-color: #0f98b087; /* Red background color */
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: large;
+  }
+  
+  /* Hover effect */
+  .backButton:hover {
+    background-color: #d32f2f; /* Darker red */
+  }
+  
+  /* Active effect */
+  .backButton:active {
+    background-color: #f44336; /* Red */
+  }
+
+  .buttonContainer {
+
+  }
+
+  .contSectionLayout{
+    display: grid;
+    grid-template-columns: 10% 100%;  
+  }
